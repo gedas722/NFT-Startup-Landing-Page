@@ -1,0 +1,338 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+    color: #555555;
+    font-weight: 400;
+    font-size: 20px;
+}
+li {
+    list-style: none;
+}
+span {
+    color: #FF3998;
+}
+
+/* START: desktop css */
+@media screen and (min-width:1024px) {
+    /* START: header */
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .head_container {
+        margin-top: 70px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .hamburger {
+        display: none;
+        cursor: pointer;
+    }
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        background-color: #999999;
+    }
+    .nav_bar ul {
+        display: flex;
+    }
+    .nav_list li {
+        margin: 18px;
+    }
+    .logo img {
+        width: 150px;
+        height: 34px;
+    }
+    /* END: header */
+
+    /* START: launching */
+    .launching_container {
+        display: flex;
+        margin-left: 80px;
+        margin-right: 240px;
+        margin-top: 288px;
+        align-items: center;
+    }
+    .launching_text h6 {
+        color: #FF3998;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    .launching_text h1 {
+        font-weight: 900; 
+        font-size: 100px;
+        color: #111111;
+        font-style: bolder;
+        margin-top: 32px;
+    }
+    .launching_text p {
+        font-weight: 400;
+        font-size: 20px;
+        color: #555555;
+        margin-top: 32px;
+        margin-bottom: 63px;
+    }
+    button {
+        position: relative;
+        padding: 20px 35px;
+        background-color: #fff;
+        border: #fff;
+    }
+    button::before {
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50px;
+        border: 5px solid transparent;
+        background:linear-gradient(45deg,#FF3939, #FF3998, #FF8139, #39FFA0) border-box;
+        -webkit-mask:linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+    .graphic img {
+        margin-top: 85px;
+        margin-right: 220px;
+    }
+    /* END: launching */
+
+    /* START: free */
+    .free_container {
+        border: 1px solid white;
+        margin-top: 182px;
+        margin-bottom: 122px;
+        margin-left: 80px;
+        margin-right: 80px;
+        background-image: url("assets/assets/background.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+    }
+    .free_text {
+        margin-top: 154px;
+        margin-bottom: 118px;
+        margin-left: 64px;
+        margin-right: 596px;
+    }
+    .free_text h3 {
+        font-size: 40px;
+        font-weight: 500;
+    }
+    .free_text p {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 24px;
+    }
+    /* END: free */
+
+    /* START: Logo container  priskirti prie free konteinerio veliau ivertinus galutini varianta*/
+    .logo_container {
+        margin-top: 154px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 118px;
+    }
+    .logo_list {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo_list a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 31px;
+        font-weight: 400;
+    }
+    /* END: Logo container */
+
+    /* START: Auction irgi bendrinti koda virsuje */
+    .auction_container {
+        margin-top: 154px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 118px;
+    }
+    .auction_text h3 {
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 24px;
+    }
+    .auction_text p {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 34px;
+    }
+    .auction_text a {
+        font-weight: 900;
+        text-decoration: underline;
+    }
+    .poster {
+        background-color: #eeeeee;
+        border-radius: 10px;
+    }
+    .auction_poster {
+        display: flex;
+        justify-content: space-between;
+    }
+    .poster_text {
+        display: flex;
+        justify-content: space-around;
+    }
+    .price {
+        display: flex;
+    }
+    .price img {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .poster_left h6 {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-transform: uppercase;
+        text-align: left;
+        color: #FF8139;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    .poster_left h5 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #111111;
+        margin-bottom: 12px;
+    }
+    .poster_left p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #777777;
+        margin-bottom: 12px;
+    }
+    .poster_right h6 {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: right;
+        text-transform: uppercase;
+        color: #777777;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    .poster_right h5 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: #111111;
+        margin-bottom: 12px;
+    }
+    .poster_right p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: #777777;
+        margin-bottom: 12px;
+    }
+    /* END: Auction */
+    /* START: Launching soon */
+    .launching_container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 154px;
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 118px;
+        border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+    }
+    .upsell img {
+        margin-top: 85px;
+        margin-right: 301px;
+    }
+    /* END: Launching soon */
+
+    /* START: footer */
+    .socials img {
+        height: 14.6px;
+        width: 18px;
+        align-items: center;
+        margin-right: 10px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .right_footer {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 740px;
+        margin-top: 30px;
+    }
+    .right_footer h4 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0.1em;
+        text-align: left;
+        margin-bottom: 28px;
+    }
+    .right_footer li {
+        font-weight: 400;
+        font-size: 20px;
+        margin: 0 100px 0 0;
+        margin-bottom: 28px;
+    }
+    .left_footer {
+        margin-top: 30px;
+    }
+    .footer_text p {
+        margin: 15px 0;
+        color: #777777;
+    }
+    .copy {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 80px;
+    }
+    .copy p {
+        margin-bottom: 70px;
+        margin-top: 123px;
+        color: #777777;
+    }
+    /* END: footer */  
+}
+/* END: desktop css */
+
+/* START: mobile css */
+@media screen and (max-width: 767px) {
+
+
+}
+/* END: mobile css */
