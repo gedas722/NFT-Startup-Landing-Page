@@ -31,19 +31,6 @@ span {
         margin-left: 80px;
         margin-right: 80px;
     }
-    .hamburger {
-        display: none;
-        cursor: pointer;
-    }
-    .bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        -webkit-transition: all 0.3s ease-out;
-        transition: all 0.3s ease-out;
-        background-color: #999999;
-    }
     .nav_bar ul {
         display: flex;
     }
@@ -71,7 +58,7 @@ span {
         text-transform: uppercase;
     }
     .launching_text h1 {
-        font-weight: 900; 
+        font-weight: 900;
         font-size: 100px;
         color: #111111;
         font-style: bolder;
@@ -259,6 +246,7 @@ span {
         margin-bottom: 12px;
     }
     /* END: Auction */
+
     /* START: Launching soon */
     .launching_container {
         display: flex;
@@ -326,13 +314,336 @@ span {
         margin-top: 123px;
         color: #777777;
     }
-    /* END: footer */  
+    /* END: footer */
 }
 /* END: desktop css */
 
 /* START: mobile css */
 @media screen and (max-width: 767px) {
+    /* START: mobile header uzbaigta!*/
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-top: 15px;
+        margin-right: 15px;
+    }
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        background-color: #999999;
+    }
+    .head_container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav_bar {
+        display: none;
+    }
+    .logo img {
+        width: 150px;
+        height: 34px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    /* END: mobile header uzbaigta!*/
 
+    /* START: Launching soon Uzbaigta!*/
+    .launching_container {
+        display: flex;
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+    .launching_text h6 {
+        color: #FF3998;
+        font-weight: 700;
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    .launching_text h1 {
+        font-weight: 900;
+        font-size: 30px;
+        color: #111111;
+        font-style: bolder;
+        margin-bottom: 15px
+    }
+    .launching_text p {
+        font-weight: 400;
+        font-size: 12px;
+        color: #555555;
+        margin-bottom: 15px;
+    }
+    button {
+        position: relative;
+        padding: 15px 25px;
+        background-color: #fff;
+        border: #fff;
+        margin-bottom: 40px;
+    }
+    button::before {
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50px;
+        border: 5px solid transparent;
+        background:linear-gradient(45deg,#FF3939, #FF3998, #FF8139, #39FFA0) border-box;
+        -webkit-mask:linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+    .graphic img {
+        margin-top: 15px;
+        height: 200px;
+    }
+    /* END: Launching soon Uzbaigta!*/
 
+    /* START: Free Uzbaigta!*/
+
+    .free_container {
+        display: flex;
+        width: 100%;
+        height: 200px;
+        background-image: url("assets/assets/background.svg");
+    }
+    .free_text h3, p {
+        margin-top: 80px;
+        margin-left: 10px;
+    }
+    .free_text h3 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .free_text p {
+        font-size: 10px;
+        font-weight: 400;
+        margin-right: 160px;
+    }
+
+    /* END: Free Uzbaigta!*/
+
+    /* START: Logo container uzbaigta! */
+    .logo_container {
+        margin: 15px 20px 15px 20px;
+        width: 100%;
+        height: auto;
+    }
+    .logo_list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px
+    }
+    .logo_list a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .logo_list img {
+        width: 100px;
+        height: 50px;
+    }
+    /* END: Logo container uzbaigta! */
+
+    /* START: Auction Uzbaigta!*/
+    .auction_container {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .auction_text {
+        margin-left: 15px;
+    }
+    .auction_text h3 {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    .auction_text p {
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 34px;
+    }
+    .auction_text a {
+        font-size: 13px;
+        font-weight: 900;
+        text-decoration: underline;
+    }
+    .poster {
+        background-color: #eeeeee;
+        border-radius: 10px;
+    }
+    .auction_poster {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .poster_text {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .price {
+        display: flex;
+    }
+    .price img {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .poster_left h6 {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-transform: uppercase;
+        text-align: left;
+        color: #FF8139;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    .poster_left h5 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #111111;
+        margin-bottom: 12px;
+    }
+    .poster_left p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #777777;
+        margin-bottom: 12px;
+    }
+    .poster_right h6 {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: right;
+        text-transform: uppercase;
+        color: #777777;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    .poster_right h5 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: #111111;
+        margin-bottom: 12px;
+    }
+    .poster_right p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: #777777;
+        margin-bottom: 12px;
+    }
+    /* END: Auction Uzbaigta!*/
+
+    /* START: Launching soon Uzbaigta!*/
+    .launching_container {
+        display: flex;
+        margin-top: 14px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 11px;
+        border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+    }
+    .upsell img {
+        margin-top: 60px;
+        height: 400px;
+
+    }
+    .launching_text {
+        text-align: center;
+    }
+    .launching_text h6, h1, p {
+        text-align: left;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    .launching_text p {
+        margin-bottom: 40px;
+    }
+    /* END: Launching soon Uzbaigta!*/
+
+    /* START: Footer uzbaigta!*/
+    .socials img {
+        height: 14.6px;
+        width: 18px;
+        align-items: center;
+        margin-right: 10px;
+        margin-bottom: 30px;
+    }
+    .container {
+        display: block;
+        margin-left: 15px;
+        margin-right: 15px;
+
+    }
+    .right_footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 80px;
+        justify-content: left;  
+    }
+    .right_footer h4 {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 9px;
+        letter-spacing: 0.1em;
+        text-align: left;
+        margin-bottom: 18px;
+    }
+    .right_footer li {
+        font-weight: 400;
+        margin: 0 10px 0 0;
+        margin-bottom: 8px;
+    }
+    .right_footer a {
+        font-size: 15px;
+    }
+    .left_footer {
+        margin-top: 3px;
+    }
+    .footer_text p {
+        margin: 15px 0 20px 0;
+        color: #777777;
+    }
+    .copy {
+        display: flex;
+        margin: 0 8px;
+    }
+    .copy p {
+        font-size: 10px;
+        margin-bottom: 20px;
+        margin-top: 12px;
+        color: #777777;
+    }
+    .copy2 {
+        display: none;
+    }
+    /* END: Footer uzbaigta!*/
 }
-/* END: mobile css */
+/* END: mobile css papildomai kurti atskirame style.css faile*/
